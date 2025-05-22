@@ -1,8 +1,8 @@
 [build]
-  command = "echo No build command"
+  command = "sed -i \"s|REDIRECT_TARGET_URL_PLACEHOLDER|${REDIRECT_TARGET_URL}|g\" netlify.toml"
 
 [[redirects]]
   from = "/*"
-  to = "${REDIRECT_TARGET_URL}"
+  to = "REDIRECT_TARGET_URL_PLACEHOLDER"
   status = 301
   force = true
